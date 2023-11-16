@@ -2,9 +2,9 @@ import React from 'react';
 
 import CustomButton from './Button.style';
 
-export default function Button({ usage, disabled, children }) {
+export default function Button({ usage, disabled, children, onClick }) {
   return (
-    <CustomButton usage={usage} disabled={disabled}>
+    <CustomButton usage={usage} disabled={disabled} onClick={onClick}>
       {children}
     </CustomButton>
   );
