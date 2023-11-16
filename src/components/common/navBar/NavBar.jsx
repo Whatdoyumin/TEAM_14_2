@@ -1,6 +1,6 @@
-import { BottomNav, BottomDiv, NavDiv, NavIcon, NavText } from '../../../styles/NavBar.style';
+import { BottomNav, BottomDiv, NavDiv, NavIcon, NavText } from './NavBar.style';
 import home from '../../../assets/images/home.svg';
-import reportEmpty from '../../../assets/images/report-empty.svg';
+import myReportEmpty from '../../../assets/images/report-empty.svg';
 import mypageEmpty from '../../../assets/images/mypage-empty.svg';
 
 export default function NavBar() {
@@ -12,7 +12,7 @@ export default function NavBar() {
           <NavText>홈</NavText>
         </NavDiv>
         <NavDiv>
-          <NavIcon alt="" src={reportEmpty} />
+          <NavIcon alt="" src={myReportEmpty} />
           <NavText>기록</NavText>
         </NavDiv>
         <NavDiv>
