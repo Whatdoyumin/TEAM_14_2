@@ -40,6 +40,17 @@ const GlobalStyle = createGlobalStyle`
   --color-grey-800: #1D2939;
   --color-grey-900: #101828;
 
+  /* font */
+  --font-size-display1: 28px;
+  --font-size-display2: 20px;
+  --font-size-display3: 18px;
+  --font-size-display4: 16px;
+  --font-size-head: 18px;
+  --font-size-subhead: 16px;
+  --font-size-body: 14px;
+  --font-size-body2: 11px;
+  --font-size-caption: 10px;
+
   /* size */
   --size-max-width: 390px;
   --size-header: 44px;
@@ -56,6 +67,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #efefef;
     margin: auto;
     overflow-y: scroll;
+    font-family: "SUIT", sans-serif;
 
     #root {
       background-color: #fff;
