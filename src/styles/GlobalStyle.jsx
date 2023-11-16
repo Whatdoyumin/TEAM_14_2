@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* size */
   --size-max-width: 390px;
-  --size-header: 88px;
+  --size-header: 44px;
   --size-navBar: 96px;
   --size-gap: 16px;
   }
@@ -77,7 +77,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0; 
   }
-  
+
   ol, ul, li {
     list-style: none;
     margin: 0;
