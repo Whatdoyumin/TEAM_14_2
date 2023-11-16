@@ -111,6 +111,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     font: inherit;
     color: inherit;
+    border: 0;
   }
 
   .a11y-hidden {
