@@ -26,6 +26,8 @@ const CustomButton = styled.button`
   width: 100%;
   padding: 14px 0;
   border-radius: 6px;
+  font-size: var(--font-size-subhead);
+  font-weight: 700;
   ${({ usage }) => BUTTON_USAGE[usage]}
 `;
 
