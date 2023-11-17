@@ -5,10 +5,6 @@ const BUTTON_USAGE = {
     color: var(--color-blue-50);
     background: var(--color-blue-500);
   `,
-  disabled: css`
-    color: var(--color-blue-50);
-    background: var(--color-blue-100);
-  `,
   grey: css`
     color: var(--color-grey-500);
     background: var(--color-grey-200);
@@ -29,6 +25,11 @@ const CustomButton = styled.button`
   font-size: var(--font-size-subhead);
   font-weight: 700;
   ${({ usage }) => BUTTON_USAGE[usage]}
+
+  &:disabled {
+    color: var(--color-blue-50);
+    background: var(--color-blue-100);
+  }
 `;
 
 export default CustomButton;
