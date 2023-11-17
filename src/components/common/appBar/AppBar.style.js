@@ -1,25 +1,37 @@
 import { styled } from 'styled-components';
 
 export const AppBarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
   position: fixed;
   top: 0;
   max-width: var(--size-max-width);
   width: 100%;
   margin-left: calc(-1 * var(--size-side-gap));
-  margin-top: 15px;
-  background-color: white;
+  padding: 12px 0;
+  background-color: var(--color-grey-50);
 `;
 
 export const PageTitle = styled.div`
+  font-size: var(--font-size-head);
   text-align: center;
-  flex: 1;
-  padding-top: 5px;
 `;
 
 export const AppInfo = styled.div`
   position: absolute;
-  right: 15px;
+  top: 8px;
+  right: 20px;
+  cursor: pointer;
+`;
+
+export const Back = styled.img`
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  cursor: pointer;
+`;
+
+export const Setting = styled.img`
+  position: absolute;
+  top: 8px;
+  right: 20px;
   cursor: pointer;
 `;
