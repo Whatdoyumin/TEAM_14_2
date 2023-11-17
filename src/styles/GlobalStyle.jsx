@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   --size-max-width: 390px;
   --size-header: 44px;
   --size-navBar: 96px;
-  --size-side-gap: 16px;
+  --size-side-gap: 20px;
   --size-bottom-gap: 64px;
   }
 
@@ -69,9 +69,10 @@ const GlobalStyle = createGlobalStyle`
     margin: auto;
     overflow-y: scroll;
     font-family: "SUIT", sans-serif;
+    font-weight: 400;
 
     #root {
-      background-color: #fff;
+      background-color: var(--color-grey-50);
       min-height: 100vh;
       padding: calc(var(--size-header) + 1.5rem) var(--size-side-gap) calc(var(--size-navBar) + 1.5rem);
       position: relative;

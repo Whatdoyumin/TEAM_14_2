@@ -4,6 +4,7 @@ import happyCloud from '../assets/images/happy.svg';
 import sadCloud from '../assets/images/sad.svg';
 import angryCloud from '../assets/images/angry.svg';
 import tiredCloud from '../assets/images/tired.svg';
+import deepFreeze from '../utils/deepFreeze';
 
 const CLOUD_DATA = {
   peaceful: {
@@ -37,5 +38,7 @@ const CLOUD_DATA = {
     src: tiredCloud,
   },
 };
+
+deepFreeze(CLOUD_DATA);
 
 export default CLOUD_DATA;
