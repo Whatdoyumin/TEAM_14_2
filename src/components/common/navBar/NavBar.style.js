@@ -7,7 +7,7 @@ export const BottomNav = styled.nav`
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: var(--color-grey-50);
   box-shadow: 0px -2px 8px -2px rgba(0, 0, 0, 0.2);
 `;
 
