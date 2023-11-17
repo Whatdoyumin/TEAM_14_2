@@ -13,3 +13,6 @@ export default function AppBar({ currentPage, showInfoBtn, onHelpBtnClick }) {
     </S.AppBarContainer>
   );
 }
+
+// ✅ USAGE
+// <AppBar title="나의 구름" />
