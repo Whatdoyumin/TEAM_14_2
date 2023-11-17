@@ -8,7 +8,7 @@ export const BottomNav = styled.nav`
   position: fixed;
   bottom: 0;
   background-color: white;
-  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -2px 8px -2px rgba(0, 0, 0, 0.2);
 `;
 
 export const BottomDiv = styled.div`
@@ -26,6 +26,7 @@ export const NavDiv = styled.div`
   align-items: center;
   width: 48px;
   height: 52px;
+  cursor: pointer;
 `;
 
 export const NavIcon = styled.img``;
