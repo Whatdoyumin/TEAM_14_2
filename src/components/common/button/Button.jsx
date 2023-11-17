@@ -25,3 +25,8 @@ export default function Button({ usage, disabled, children, onClick }) {
 // <Button usage="grey">
 //  취소
 // </Button>
+
+// {/* CTA 버튼 */}
+// <Button usage="cta">
+//  시작하기
+// </Button>

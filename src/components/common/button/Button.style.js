@@ -13,6 +13,13 @@ const BUTTON_USAGE = {
     color: var(--color-grey-500);
     background: var(--color-grey-200);
   `,
+  cta: css`
+    color: var(--color-blue-50);
+    background: var(--color-blue-500);
+    position: absolute;
+    bottom: 64px;
+    width: calc(100% - 2 * var(--size-side-gap));
+  `,
 };
 
 const CustomButton = styled.button`
