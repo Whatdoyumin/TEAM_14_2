@@ -29,9 +29,16 @@ export const Dialog = styled.div`
   flex-direction: column;
   gap: 24px;
 
+  span {
+    font-family: 'NPSfontBold', sans-serif;
+    color: var(--color-grey-800);
+    font-size: var(--font-size-display3);
+  }
+
   img {
     display: block;
     margin: 0 auto;
+    max-width: 140px;
   }
 
   h2 {
