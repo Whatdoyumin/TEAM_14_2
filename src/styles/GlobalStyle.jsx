@@ -55,7 +55,8 @@ const GlobalStyle = createGlobalStyle`
   --size-max-width: 390px;
   --size-header: 44px;
   --size-navBar: 96px;
-  --size-gap: 16px;
+  --size-side-gap: 16px;
+  --size-bottom-gap: 64px;
   }
 
   * {
@@ -72,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
     #root {
       background-color: #fff;
       min-height: 100vh;
-      padding: calc(var(--size-header) + 1.5rem) var(--size-gap) calc(var(--size-navBar) + 1.5rem);
+      padding: calc(var(--size-header) + 1.5rem) var(--size-side-gap) calc(var(--size-navBar) + 1.5rem);
       position: relative;
     }
   }

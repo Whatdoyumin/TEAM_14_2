@@ -7,7 +7,7 @@ export const AppBarContainer = styled.div`
   top: 0;
   max-width: var(--size-max-width);
   width: 100%;
-  margin-left: calc(-1 * var(--size-gap));
+  margin-left: calc(-1 * var(--size-side-gap));
   margin-top: 15px;
   background-color: white;
 `;

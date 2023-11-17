@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const BottomNav = styled.nav`
   max-width: var(--size-max-width);
   width: 100%;
-  margin-left: calc(-1 * var(--size-gap));
+  margin-left: calc(-1 * var(--size-side-gap));
   overflow: hidden;
   position: fixed;
   bottom: 0;
