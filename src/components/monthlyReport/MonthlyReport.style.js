@@ -4,7 +4,7 @@ export const MonthlyReportContainer = styled.div`
   width: 100%;
   height: 50vh;
   position: relative;
-  top: -1%;
+  top: 15%;
 `;
 
 export const CloudImg = styled.img`
