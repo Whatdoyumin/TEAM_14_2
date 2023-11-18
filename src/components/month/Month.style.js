@@ -9,6 +9,7 @@ export const CurrentMonth = styled.div`
   font-size: 18px;
   text-align: center;
   font-family: 'NPSfontBold', sans-serif;
+  position: relative;
 `;
 
 export const GlobalStyles = GlobalFont;
