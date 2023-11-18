@@ -2,12 +2,13 @@ import { styled } from 'styled-components';
 
 export const ToggleWrapper = styled.div`
   max-width: var(--size-max-width);
-  width: 100%;
+  width: calc(100% + var(--size-max-width));
+  margin-left: calc(-1 * var(--size-side-gap));
   /* height: 51px; */
   margin-top: -1.5rem;
-  margin-left: calc(-1 * var(--size-side-gap));
   margin-bottom: 24px;
   display: flex;
+  justify-content: center;
   align-items: center;
   z-index: 1;
 `;

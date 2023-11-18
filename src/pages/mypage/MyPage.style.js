@@ -21,8 +21,7 @@ export const ProfileImageWrapper = styled.div`
   height: 213px;
   margin: 8px 0;
   border-radius: 8px;
-  background-color: var(--color-blue-50);
-  background-image: url(${characterBg});
+  background: no-repeat center bottom / cover var(--color-blue-50) url(${characterBg});
 
   img {
     position: absolute;
