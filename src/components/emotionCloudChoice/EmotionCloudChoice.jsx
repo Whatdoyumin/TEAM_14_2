@@ -1,56 +1,73 @@
-import { useState } from 'react';
+/* eslint-disable no-param-reassign */
+import React, { useState, useContext, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  EmotionChoiceContainer,
-  EmotionMent,
-  EmotionGrid,
-  EmotionChoiceBtn,
-} from './EmotionCloudChoice.style';
+import { EmotionChoiceContainer, EmotionGrid, EmotionChoiceBtn } from './EmotionCloudChoice.style';
 import Button from '../common/button/Button';
 import CLOUD_DATA from '../../constants/cloudData';
+import DiaryContext from '../../contexts/DiaryContext';
 
-export default function EmotionCloudeChoice() {
-  const [selectedEmotion, setSelectedEmotion] = useState(null);
-  const [isPrimaryBtnDisabled, setPrimaryBtnDisabled] = useState(true);
+export default function EmotionCloudChoice({ onConfirm }) {
+  const { diaryState, setEmotion } = useContext(DiaryContext);
+  const [selectedEmotion, setSelectedEmotion] = useState(diaryState.emotion);
+  const emotionRef = useRef(null);
   const navigate = useNavigate();
 
-  const onEmotionClick = (emotion) => {
-    setSelectedEmotion(CLOUD_DATA[emotion]);
-    setPrimaryBtnDisabled(false);
-  };
+  useEffect(() => {
+    if (emotionRef.current) {
+      const labels = emotionRef.current.parentElement.querySelectorAll('label');
 
-  const onCancelClick = () => {
-    navigate(-1);
-  };
-
-  const goToDiaryWrite = () => {
-    navigate('/diary/write');
-  };
+      labels.forEach((el) => {
+        const emotionImg = el.children[0];
+        emotionImg.classList.remove('select');
+        if (emotionImg.alt === selectedEmotion) emotionImg.classList.add('select');
+      });
+    }
+  }, [selectedEmotion]);
 
   return (
-    <EmotionChoiceContainer>
-      {selectedEmotion && (
-        <EmotionMent>
-          <p>나는 오늘 </p>
-          <h4>{selectedEmotion.name}</h4>
-          <p>{selectedEmotion.message}</p>
-        </EmotionMent>
-      )}
-      <EmotionGrid>
-        {Object.keys(CLOUD_DATA).map((emotion) => (
-          <button key={emotion} onClick={() => onEmotionClick(emotion)} type="button">
-            <img src={CLOUD_DATA[emotion].src} alt={emotion} />
-          </button>
-        ))}
-      </EmotionGrid>
+    <>
+      <EmotionChoiceContainer>
+        {selectedEmotion ? (
+          <>
+            <span>나는 오늘</span>
+            <strong>{CLOUD_DATA[selectedEmotion].name}</strong>
+            <span>{CLOUD_DATA[selectedEmotion].message}</span>
+          </>
+        ) : (
+          ''
+        )}
+        <EmotionGrid>
+          {Object.keys(CLOUD_DATA).map((emotion) => (
+            <React.Fragment key={emotion}>
+              <label htmlFor={emotion} ref={emotionRef}>
+                <img src={CLOUD_DATA[emotion].src} alt={emotion} />
+                <input
+                  type="radio"
+                  name="emotion"
+                  id={emotion}
+                  onChange={() => setSelectedEmotion(emotion)}
+                />
+              </label>
+            </React.Fragment>
+          ))}
+        </EmotionGrid>
+      </EmotionChoiceContainer>
       <EmotionChoiceBtn>
-        <Button usage="grey" onClick={onCancelClick}>
+        <Button usage="grey" onClick={() => navigate(-1)}>
           취소
         </Button>
-        <Button usage="primary" disabled={isPrimaryBtnDisabled} onClick={goToDiaryWrite}>
+        <Button
+          usage="primary"
+          disabled={!selectedEmotion}
+          onClick={() => {
+            setEmotion(selectedEmotion);
+            if (onConfirm) onConfirm();
+            navigate('/diary/write');
+          }}
+        >
           확인
         </Button>
       </EmotionChoiceBtn>
-    </EmotionChoiceContainer>
+    </>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import getDate from '../../utils/getDate';
 import { Date, DiaryLink, MainBg } from './Main.style';
 import sketchbook from '../../assets/images/sketchbook.svg';
@@ -6,6 +6,7 @@ import smSheep from '../../assets/images/sm-sheep.svg';
 import clouldBalloon from '../../assets/images/cloud-balloon.svg';
 // import heartBalloon from '../../assets/images/heart-balloon.svg';
 import modalSheep from '../../assets/images/modal-sheep.svg';
+import DiaryContext from '../../contexts/DiaryContext';
 
 import AppBar from '../../components/common/appBar/AppBar';
 import NavBar from '../../components/common/navBar/NavBar';
@@ -14,6 +15,7 @@ import Modal from '../../components/common/modal/Modal';
 export default function Main() {
   const today = getDate();
   const [modalOpen, setModalOpen] = useState(false);
+  const { diaryState } = useContext(DiaryContext);
 
   return (
     <>
@@ -28,7 +30,7 @@ export default function Main() {
         <img src={clouldBalloon} alt="" />
         <img src={smSheep} alt="" />
       </MainBg>
-      <DiaryLink to="/diary/write">
+      <DiaryLink to={diaryState.isWriteToday ? '/diary/write' : '/emotionChoice'}>
         <img src={sketchbook} alt="" />
         <p>오늘 당신의 감정날씨를 알려주세요!</p>
       </DiaryLink>
