@@ -11,7 +11,7 @@ export default function EmotionSky() {
       <MonthContainer>
         <MonthCloudCount>
           <span>총 </span>
-          <span>18</span>
+          <span>15</span>
           <span>개의 구름을 띄웠어요!</span>
         </MonthCloudCount>
         <Month />

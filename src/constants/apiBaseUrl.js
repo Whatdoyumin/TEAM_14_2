@@ -1,4 +1,4 @@
-const BASE_URL = 'http://15.164.225.237:8080';
+const BASE_URL = 'http://54.180.144.39:8080';
 const API_VERSION = '/api/v1';
 
 const API_URL = Object.freeze({
