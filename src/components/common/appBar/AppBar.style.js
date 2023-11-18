@@ -8,6 +8,7 @@ export const AppBarContainer = styled.div`
   margin-left: calc(-1 * var(--size-side-gap));
   padding: 12px 0;
   background-color: var(--color-grey-50);
+  z-index: 1;
 `;
 
 export const PageTitle = styled.div`
