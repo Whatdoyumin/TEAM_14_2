@@ -3,6 +3,7 @@ import WeeklyReport from '../../components/weeklyReport/WeeklyReport';
 import NavBar from '../../components/common/navBar/NavBar';
 import { ToggleInput, ToggleLabel, ToggleWrapper } from './Report.style';
 import AppBar from '../../components/common/appBar/AppBar';
+import EmotionSky from '../../components/emotionSky/EmotionSky';
 
 export default function Report() {
   const [viewWeather, setViewWeather] = useState(true);
@@ -42,7 +43,7 @@ export default function Report() {
         />{' '}
         <ToggleLabel htmlFor="sky-toggle">감정 하늘</ToggleLabel>
       </ToggleWrapper>
-      {viewWeather ? <WeeklyReport diaryData={diaryData} /> : <span>감정하늘 컴포넌트</span>}
+      {viewWeather ? <WeeklyReport diaryData={diaryData} /> : <EmotionSky />}
       <NavBar />
     </>
   );
