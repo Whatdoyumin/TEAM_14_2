@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
 
     #root {
       background-color: var(--color-grey-50);
-      min-height: 100vh;
+      height: 100vh;
       padding: calc(var(--size-header) + 1.5rem) var(--size-side-gap) calc(var(--size-navBar) + 1.5rem);
       position: relative;
     }
