@@ -2,10 +2,9 @@ import { styled } from 'styled-components';
 
 export const MonthlyReportContainer = styled.div`
   width: 100%;
-  height: 100vh;
-  margin-top: 40px;
+  height: 50vh;
   position: relative;
-  overflow: hidden;
+  top: -1%;
 `;
 
 export const CloudImg = styled.img`
@@ -15,6 +14,7 @@ export const CloudImg = styled.img`
   display: ${({ size }) => (size > 0 ? 'block' : 'none')};
   left: ${({ left }) => `${left}px`};
   top: ${({ top }) => `${top}px`};
+  cursor: pointer;
 `;
 
 export default MonthlyReportContainer;

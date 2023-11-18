@@ -9,6 +9,7 @@ export const ToggleWrapper = styled.div`
   margin-bottom: 24px;
   display: flex;
   align-items: center;
+  z-index: 1;
 `;
 
 export const ToggleInput = styled.input`
@@ -36,5 +37,7 @@ export const ToggleLabel = styled.label`
   flex-grow: 1;
   box-sizing: border-box;
   color: var(--color-grey-400);
+  background-color: var(--color-grey-50);
   cursor: pointer;
+  z-index: 1;
 `;

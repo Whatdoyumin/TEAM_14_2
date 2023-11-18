@@ -14,18 +14,20 @@ export const MainBg = styled.div`
   aspect-ratio: 390 / 478;
   margin-left: calc(-1 * var(--size-side-gap));
   position: absolute;
-  bottom: 0;
-  background-image: url(${GrassCloud});
+  bottom: 5%;
+  background: no-repeat url(${GrassCloud});
   background-size: cover;
-
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   img:first-child {
-    top: -20%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 100%;
   }
   img {
     position: absolute;
-    top: -26%;
+    bottom: 49%;
   }
 `;
 
